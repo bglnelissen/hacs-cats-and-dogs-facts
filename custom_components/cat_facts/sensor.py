@@ -34,12 +34,7 @@ class CatFactSensor(CoordinatorEntity[CatFactsCoordinator], SensorEntity):
 
     @property
     def native_value(self) -> str | None:
-        fact = self.coordinator.data
-        if fact is None:
-            return None
-        if len(fact) <= 255:
-            return fact
-        return fact[:254] + "…"  # … as single char to stay within 255
+        return self.coordinator.data
 
     @property
     def extra_state_attributes(self) -> dict:
