@@ -1,0 +1,11 @@
+{
+  "domain": "cat_facts",
+  "name": "Cat Facts",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/bglnelissen/hacs-cat-facts",
+  "issue_tracker": "https://github.com/bglnelissen/hacs-cat-facts/issues",
+  "iot_class": "cloud_polling",
+  "codeowners": ["@bglnelissen"],
+  "requirements": []
+}

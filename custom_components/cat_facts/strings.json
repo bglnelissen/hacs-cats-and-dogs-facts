@@ -1,0 +1,37 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Cat Facts",
+        "description": "Configure Cat Facts. The integration will fetch cat facts from the given JSON URL and update the sensor every configured number of hours.",
+        "data": {
+          "json_url": "JSON URL",
+          "random": "Random order",
+          "update_interval": "Update interval (hours)"
+        },
+        "data_description": {
+          "json_url": "URL to a JSON file containing a list of facts, or an object with a 'facts' key.",
+          "random": "Pick a random fact on each update. Disable for sequential order.",
+          "update_interval": "How many hours between each new fact (1–168)."
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cat Facts options",
+        "data": {
+          "json_url": "JSON URL",
+          "random": "Random order",
+          "update_interval": "Update interval (hours)"
+        },
+        "data_description": {
+          "json_url": "URL to a JSON file containing a list of facts, or an object with a 'facts' key.",
+          "random": "Pick a random fact on each update. Disable for sequential order.",
+          "update_interval": "How many hours between each new fact (1–168)."
+        }
+      }
+    }
+  }
+}
