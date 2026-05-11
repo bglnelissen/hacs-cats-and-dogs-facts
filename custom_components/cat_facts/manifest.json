@@ -1,7 +1,7 @@
 {
   "domain": "cat_facts",
   "name": "Cat Facts",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "config_flow": true,
   "documentation": "https://github.com/bglnelissen/hacs-cat-facts",
   "issue_tracker": "https://github.com/bglnelissen/hacs-cat-facts/issues",
