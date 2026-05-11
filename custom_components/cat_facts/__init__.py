@@ -51,7 +51,7 @@ class CatFactsCoordinator(DataUpdateCoordinator[str]):
         self._facts: list[str] = []
         self._index: int = 0
         interval = timedelta(
-            hours=entry.options.get(CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL)
+            minutes=entry.options.get(CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL)
         )
         super().__init__(hass, _LOGGER, name=DOMAIN, update_interval=interval)
 

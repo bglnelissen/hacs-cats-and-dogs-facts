@@ -3,18 +3,21 @@
     "step": {
       "user": {
         "title": "Cat Facts",
-        "description": "Configure Cat Facts. The integration will fetch cat facts from the given JSON URL and update the sensor every configured number of hours.",
+        "description": "Configure Cat Facts. The integration will fetch cat facts from the given JSON URL and update the sensor on the configured interval.",
         "data": {
           "json_url": "JSON URL",
           "random": "Random order",
-          "update_interval": "Update interval (hours)"
+          "update_interval": "Update interval"
         },
         "data_description": {
           "json_url": "URL to a JSON file containing a list of facts, or an object with a 'facts' key.",
           "random": "Pick a random fact on each update. Disable for sequential order.",
-          "update_interval": "How many hours between each new fact (1–168)."
+          "update_interval": "How long between each new fact. Examples: 30m, 6h, 1d, 1d12h (max 7d)."
         }
       }
+    },
+    "error": {
+      "invalid_interval": "Invalid interval. Use formats like 30m, 6h, 1d or 1d12h (max 7d)."
     }
   },
   "options": {
@@ -24,14 +27,17 @@
         "data": {
           "json_url": "JSON URL",
           "random": "Random order",
-          "update_interval": "Update interval (hours)"
+          "update_interval": "Update interval"
         },
         "data_description": {
           "json_url": "URL to a JSON file containing a list of facts, or an object with a 'facts' key.",
           "random": "Pick a random fact on each update. Disable for sequential order.",
-          "update_interval": "How many hours between each new fact (1–168)."
+          "update_interval": "How long between each new fact. Examples: 30m, 6h, 1d, 1d12h (max 7d)."
         }
       }
+    },
+    "error": {
+      "invalid_interval": "Invalid interval. Use formats like 30m, 6h, 1d or 1d12h (max 7d)."
     }
   }
 }
