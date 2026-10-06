@@ -1,6 +1,6 @@
-DOMAIN = "cat_facts"
+DOMAIN = "cats_and_dogs_facts"
 
-DEFAULT_JSON_URL = "https://raw.githubusercontent.com/bglnelissen/cat-facts-dataset/main/cat_facts.json"
+DEFAULT_JSON_URL = "https://raw.githubusercontent.com/bglnelissen/cats-and-dogs-facts-dataset/main/cats_and_dogs_facts.json"
 DEFAULT_RANDOM = True
 DEFAULT_UPDATE_INTERVAL = 360  # minutes (= 6h)
 

@@ -1,0 +1,11 @@
+{
+  "domain": "cats_and_dogs_facts",
+  "name": "Cats and Dogs Facts",
+  "version": "2.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/bglnelissen/hacs-cats-and-dogs-facts",
+  "issue_tracker": "https://github.com/bglnelissen/hacs-cats-and-dogs-facts/issues",
+  "iot_class": "cloud_polling",
+  "codeowners": ["@bglnelissen"],
+  "requirements": []
+}

@@ -23,7 +23,7 @@ PLATFORMS = ["sensor", "button"]
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    coordinator = CatFactsCoordinator(hass, entry)
+    coordinator = CatsAndDogsFactsCoordinator(hass, entry)
     try:
         await coordinator.async_config_entry_first_refresh()
     except Exception as err:
@@ -45,7 +45,7 @@ async def _async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
     await hass.config_entries.async_reload(entry.entry_id)
 
 
-class CatFactsCoordinator(DataUpdateCoordinator[str]):
+class CatsAndDogsFactsCoordinator(DataUpdateCoordinator[str]):
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
         self._entry = entry
         self._facts: list[str] = []
@@ -84,4 +84,4 @@ class CatFactsCoordinator(DataUpdateCoordinator[str]):
         else:
             raise UpdateFailed(f"Unexpected JSON format at {url}")
 
-        _LOGGER.debug("Loaded %d cat facts from %s", len(self._facts), url)
+        _LOGGER.debug("Loaded %d facts from %s", len(self._facts), url)

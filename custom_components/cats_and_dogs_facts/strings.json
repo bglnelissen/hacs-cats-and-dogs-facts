@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Cat Facts",
-        "description": "Configure Cat Facts. The integration will fetch cat facts from the given JSON URL and update the sensor on the configured interval.",
+        "title": "Cats and Dogs Facts",
+        "description": "Configure Cats and Dogs Facts. The integration will fetch cat and dog facts from the given JSON URL and update the sensor on the configured interval.",
         "data": {
           "json_url": "JSON URL",
           "random": "Random order",
@@ -23,7 +23,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "Cat Facts options",
+        "title": "Cats and Dogs Facts options",
         "data": {
           "json_url": "JSON URL",
           "random": "Random order",

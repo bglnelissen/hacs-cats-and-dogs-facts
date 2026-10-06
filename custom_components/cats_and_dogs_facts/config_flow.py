@@ -78,7 +78,7 @@ def _validate_and_process(user_input: dict) -> tuple[dict, dict]:
     return processed, errors
 
 
-class CatFactsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class CatsAndDogsFactsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1
 
     async def async_step_user(self, user_input=None):
@@ -86,7 +86,7 @@ class CatFactsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             processed, errors = _validate_and_process(user_input)
             if not errors:
-                return self.async_create_entry(title="Cat Facts", data={}, options=processed)
+                return self.async_create_entry(title="Cats and Dogs Facts", data={}, options=processed)
         return self.async_show_form(
             step_id="user",
             data_schema=_build_schema(user_input or {}),
@@ -96,10 +96,10 @@ class CatFactsConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     @staticmethod
     @callback
     def async_get_options_flow(config_entry):
-        return CatFactsOptionsFlow()
+        return CatsAndDogsFactsOptionsFlow()
 
 
-class CatFactsOptionsFlow(config_entries.OptionsFlow):
+class CatsAndDogsFactsOptionsFlow(config_entries.OptionsFlow):
     async def async_step_init(self, user_input=None):
         errors = {}
         if user_input is not None:

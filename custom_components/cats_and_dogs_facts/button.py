@@ -4,7 +4,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from . import CatFactsCoordinator
+from . import CatsAndDogsFactsCoordinator
 from .const import DOMAIN
 
 
@@ -13,23 +13,23 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    coordinator: CatFactsCoordinator = hass.data[DOMAIN][entry.entry_id]
-    async_add_entities([CatFactNextButton(coordinator, entry)])
+    coordinator: CatsAndDogsFactsCoordinator = hass.data[DOMAIN][entry.entry_id]
+    async_add_entities([CatsAndDogsFactNextButton(coordinator, entry)])
 
 
-class CatFactNextButton(CoordinatorEntity[CatFactsCoordinator], ButtonEntity):
+class CatsAndDogsFactNextButton(CoordinatorEntity[CatsAndDogsFactsCoordinator], ButtonEntity):
     _attr_icon = "mdi:skip-next"
     _attr_has_entity_name = True
     _attr_name = "Next fact"
 
-    def __init__(self, coordinator: CatFactsCoordinator, entry: ConfigEntry) -> None:
+    def __init__(self, coordinator: CatsAndDogsFactsCoordinator, entry: ConfigEntry) -> None:
         super().__init__(coordinator)
         self._attr_unique_id = f"{entry.entry_id}_next"
         self._attr_device_info = {
             "identifiers": {(DOMAIN, entry.entry_id)},
-            "name": "Cat Facts",
+            "name": "Cats and Dogs Facts",
             "manufacturer": "bglnelissen",
-            "model": "Cat Facts",
+            "model": "Cats and Dogs Facts",
         }
 
     async def async_press(self) -> None:
